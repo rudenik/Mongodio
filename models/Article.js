@@ -11,6 +11,8 @@ var ArticleSchema = new Schema({
         type: String,
         required: true,
     },
+    photo: String,
+    excerpt: String,
 
 
     comments:[{
