@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC|Lobster|Montserrat|Open+Sans+Condensed:300" rel="stylesheet">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js" defer></script>
     <script src="assets/javascript/app.js" defer></script>
     <script src="assets/javascript/typed.js"></script>
 
@@ -19,7 +19,7 @@
         <div class="nav-wrapper blue">
           <a href="#" class="brand-logo">MongoStore WebScraper</a>
           <ul id="nav-mobile" class="right  hide-on-med-and-down">
-            <li><a class="waves-effect waves-light btn"><i class="material-icons left">assignment</i>Scrape New Articles</a></li>
+            <li><a id="scrape" class="waves-effect waves-light btn"><i class="material-icons left">assignment</i>Scrape New Articles</a></li>
             <li><a href="sass.html">Saved Articles</a></li>
             <li><a href="badges.html">Comments</a></li>  
           </ul>
@@ -45,10 +45,31 @@
       </div>
       <div class="row">
         <div class="container" id="articles">
-          <div class="col s12 m7 l12">
+          <div class="col s12 m7 l12" id="artdisplay">
             
           </div>
         </div>
       </div>
+      <div id="modal1" class="modal modal-fixed-footer">
+        <div class="modal-content">
+          <h4 id="modal-header"></h4>
+          <div class="col m6" id="modal-body"></div>
 
+          <!-- <p>A bunch of text</p> -->
+          <form id="commentform" action="http://localhost:3000/addcomment/" method="POST">
+              <label for="body">Comment</label>
+              <textarea class="form-control" rows="1" id="body"></textarea>
+            
+        </div>
+        <div class="modal-footer">
+          <!-- <div class="left-align"> -->
+            <!-- <a href= class="waves-effect waves-green left-align">Add Comment</a> -->
+            <!-- <button type="submit" class="btn btn-success addcomment" >Add Comment</button> -->
+            <input type="submit" name="submit" class="btn btn-success" >
+          </form>
+          <!-- </div> -->
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Done</a>
+        </div>
+      </div>
+      <!-- <script type="text/javascript" src="assets/javascript/materialize.min.js"></script> -->
 </body>
