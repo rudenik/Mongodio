@@ -14,8 +14,7 @@ var ArticleSchema = new Schema({
     },
     photo: String,
     excerpt: String,
-
-
+    dateCreated: Date,
     comments:[{
         type: Schema.Types.ObjectId,
         ref: "Comment"
